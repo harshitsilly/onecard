@@ -1,0 +1,81 @@
+﻿<div class="modal slide-in-right" style="height: 300px;" ng-controller="newPass1Ctrl">
+   <header class="bar bar-header  bar-dark bar-secondary">
+      <button class="button button-clear button-primary" ng-click="close()">Cancel</button>
+       
+      <h1 class="title">PASSWORD</h1>
+      <button class="button button-positive" ng-click="createNew1()">Done</button>
+      <!--<button class="button button-positive" ng-click="createNew()">Done</button>-->
+   </header>
+   <ion-content class="padding has-header">
+          <div ng-hide="noData1()">
+           <h4 class="title">Edit your Password.</h4>
+           </div>
+            <div ng-show= "noData1()">
+           <h4 class="title">Create your Password.</h4>
+           </div>
+           
+      <form name="userForm" validate >
+        <div class="form-group">
+         
+         
+          <div>
+            
+      <div ><div   ng-hide="noData1()">
+              
+              <label class="item item-input item-select">
+          <input type="password" placeholder="Old Password" name = "password" ng-model="data.item8" ng-minlength="6"
+                ng-maxlength="16"
+                required  class="form-control">
+                 
+    
+    
+          
+
+          </label>
+          <ng-messages for="userForm.password.$error">
+        <ng-message when="minlength">Password is short. It should be atleast 6 characters.</ng-message>
+        <ng-message when="maxlength"></ng-message>
+        <ng-message when="required">Required!</ng-message>
+          
+        </ng-messages></div>
+         <div >
+          <label class="item item-input item-select">
+          <input type="password" placeholder="New Passsword" name = "password1" ng-model="data.item10" ng-minlength="6"
+                ng-maxlength="16"
+                required  class="form-control">
+                 
+    
+    
+          
+
+          </label>
+          <ng-messages for="userForm.password1.$error">
+        <ng-message when="minlength">Password is short. It should be atleast 6 characters.</ng-message>
+        <ng-message when="maxlength"></ng-message>
+        <ng-message when="required">Required!</ng-message>
+          
+        </ng-messages>
+        </div>
+      </div>
+     
+   </div>
+      
+      
+
+ </div>
+
+       
+
+
+
+
+     </form>
+     
+      
+   </ion-content>
+</div>
+
+ 
+     
+     
+    

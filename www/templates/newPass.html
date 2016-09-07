@@ -1,0 +1,73 @@
+﻿<div class="modal slide-in-right" style="height: 300px;" ng-controller="newPassCtrl">
+   <header class="bar bar-header bar-dark bar-secondary">
+      <button class="button button-clear button-primary" ng-click="close()">Cancel</button>
+       
+      <h1 class="title">PIN</h1>
+      <button class="button button-positive" ng-click="createNew()">Done</button>
+      <!--<button class="button button-positive" ng-click="createNew()">Done</button>-->
+   </header>
+   <ion-content class="padding has-header">
+           <div  ng-hide="noData()">
+           <h4 class="title">Edit your PIN</h4>
+           </div>
+           
+     <form name="userForm"  validate >
+        <div class="form-group">
+         
+         
+          <div>
+            
+      <div  ng-hide="noData()" >
+              
+               <label class="item item-input item-select">
+          <input type="password" placeholder="Old Pin" name = "pin1" ng-model="data.item7" ng-minlength="4"
+                ng-maxlength="4"
+                required  class="form-control">
+                 
+    
+    
+          
+
+          </label>
+          <ng-messages for="userForm.pin1.$error">
+        <ng-message when="minlength">Pin is short</ng-message>
+        <ng-message when="maxlength">Pin should be of 4 digits.</ng-message>
+        <ng-message when="required">Required!</ng-message>
+          
+        </ng-messages></div>
+        <div  >
+          <label class="item item-input item-select">
+          <input type="password" placeholder="New Pin" name = "pin2" ng-model="data.item9" ng-minlength="4"
+                ng-maxlength="4"
+                required  class="form-control">
+                 
+    
+    
+          
+
+          </label>
+          <ng-messages for="userForm.pin2.$error">
+        <ng-message when="minlength">Pin is short</ng-message>
+        <ng-message when="maxlength">Pin should be of 4 digits.</ng-message>
+        <ng-message when="required">Required!</ng-message>
+          
+        </ng-messages>
+        
+      </div>
+     
+   </div>
+      
+      
+
+ </div>
+
+       
+
+
+
+
+     </form>
+     
+      
+   </ion-content>
+</div>

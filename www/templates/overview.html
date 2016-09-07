@@ -1,0 +1,32 @@
+﻿<ion-view title="OneCard">
+    <ion-content overflow-scroll="true" padding="true"  class="has-header">
+        <h3>Connect your card reader to start</h3>
+        <div>
+            <p>or Enter your card
+                <strong>manually in account section.</strong>
+            </p>
+        </div>
+        <div class="list card">
+            <div class="item item-divider">OneCard</div>
+            <div class="item item-body">
+                <ion-list>
+                    <label class="item item-input">
+                        <input type="number" placeholder="Card Number">
+                    </label>
+                    <label class="item item-input">
+                        <input type="date" placeholder="Valid Thru">
+                    </label>
+                </ion-list>
+            </div>
+            <div class="item item-divider">Debit/Credit/Wallets/Gift Voucher</div>
+        </div>
+        <div ng-hide="{{image1}}" >
+        <img   ng-src="img/onecard.gif"> </div>
+       <p  class="event received">Plug the card reader to start scanning. {{image1}} </p>
+       <!--<button id="scanBtn" ng-click="scanCard()"> Scan Now!</button> -->
+       <button  ng-click="ajoutCompte()" class="button button-large button-block button-light">Scan Card camera</button>
+       <button   ng-show="{{image1}}"  ng-click="start()" class="button button-large button-block button-light">Scan Card start</button>
+        <button ng-show="{{image1}}"  ng-click="stop()" class="button button-large button-block button-light">Scan Card stop</button>
+         <!--<button ng-click="see()" class="button button-large button-block button-light">Sample</button>-->
+    </ion-content>
+</ion-view>
